@@ -1,0 +1,11 @@
+CREATE TABLE sintomas (
+	nome varchar(30) NOT NULL,
+	sobrenome varchar(30) NOT NULL,
+	tia int NOT NULL,
+	sintomas int DEFAULT '0',
+	contato varchar(3),
+	doses varchar(3),
+	contraiu varchar(3),
+	sugestao text,
+	PRIMARY KEY (tia)
+)default charset = utf8mb4;
