@@ -1,57 +1,3 @@
-<?php
-
-    //$sintoma1 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma2 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma3 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma4 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma5 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma6 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma7 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma8 = (bool) rand(0, 1) ? "checked" : null;
-    //$sintoma9 = (bool) rand(0, 1) ? "checked" : null;
-    $nsintomas = 0;
-
-    for ($i = 1; $i<9;$i++)
-    if (isset($_POST['sintoma'.$i]))
-    {
-        $nsintomas= $nsintomas+1;
-    }
-    else
-    {
-        $nsintomas= $nsintomas;
-    }
-
-    //if(isset($_POST['submit']))
-    //{
-    //    print_r($nsintomas);
-    //    print_r($_POST['nome']);
-    //    print_r($_POST['sobrenome']);
-    //    print_r($_POST['tia']);
-    //    print_r($_POST['sintoma1']);
-    //    print_r($_POST['contato']);
-    //    print_r($_POST['dose']);
-    //    print_r($_POST['contraiu']);
-    //    print_r($_POST['sugestao']);
-    //}
-    
-    
-    
-    
-    include_once('conexao.php');
-
-    $nome = $_POST['nome'];
-    $sobrenome = $_POST['sobrenome'];
-    $tia = $_POST['tia'];
-    $contato = $_POST['contato'];
-    $dose = $_POST['dose'];
-    $contraiu = $_POST['contraiu'];
-    $sugestao = $_POST['sugestao'];
-
-    $result = mysqli_query($conexao, "INSERT INTO sintomas(nome,sobrenome,tia,sintomas,contato,doses,contraiu,sugestao) 
-    VALUES ('$nome','$sobrenome','$tia','$nsintomas','$contato','$dose','$contraiu','$sugestao')");
-
-?>
-
 <!DOCTYPE html>
 <html lang="ptbr">
 <head>
@@ -69,7 +15,7 @@
         <br>
     </div>
 
-    <form action="formulario.php" method="POST">
+    <form action="testformulario.php" method="POST">
         <fieldset class="grupo">
             <div class="campo">
                 <label for="nome"><strong>Nome</strong></label>
