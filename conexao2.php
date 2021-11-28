@@ -5,8 +5,8 @@ $bancodedados = "AdrianoGeraldo";
 $usuario = "root";
 $senha = "mackenzie";
 
-$conexao = new mysqli($hostname, $usuario, $senha, $bancodedados);
-//if ($conexao ->connect_errno){
+$conexao2 = new mysqli($hostname, $usuario, $senha, $bancodedados);
+//if ($conexao2 ->connect_errno){
     //echo "Falha ao conectar: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 //}
 //else{
